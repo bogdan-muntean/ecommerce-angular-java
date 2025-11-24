@@ -1,13 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
-// import { NxWelcome } from './nx-welcome';
+import { FaConfig, FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { fontAwesomeIcons } from './shared/font-awesome-icons';
 
 @Component({
-  imports: [RouterModule],
+  standalone: true,
+  imports: [RouterModule, FontAwesomeModule],
   selector: 'app-root',
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
-export class App {
-  protected title = 'app-frontend';
+export class App implements OnInit {
+  // protected title = 'app-frontend';
+
+  private faIconLibrary = inject(FaIconLibrary);
+  private faConfig = inject(FaConfig);
+
+  ngOnInit(): void {
+    this.initFontAwesome();
+  }
+
+  private initFontAwesome(): void {
+    this.faIconLibrary.addIcons(...fontAwesomeIcons);
+    this.faConfig.defaultPrefix = 'far';
+  }
 }
