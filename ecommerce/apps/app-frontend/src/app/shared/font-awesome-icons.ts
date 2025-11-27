@@ -1,4 +1,5 @@
-import { faCartShopping, IconDefinition } from '@fortawesome/free-solid-svg-icons';
+import { IconDefinition } from '@fortawesome/angular-fontawesome';
+import { faCartShopping, faTruckFast } from '@fortawesome/free-solid-svg-icons';
 import {
   faUser,
   faShoppingCart,
@@ -7,6 +8,12 @@ import {
   faSignOutAlt
 } from '@fortawesome/free-solid-svg-icons';
 
+import {
+  faFacebook,
+  faTwitter,
+  faYoutube
+} from '@fortawesome/free-brands-svg-icons';
+
 // Only load icons actually used in the app to reduce bundle size
 export const fontAwesomeIcons: IconDefinition[] = [
   faUser,
@@ -14,5 +21,9 @@ export const fontAwesomeIcons: IconDefinition[] = [
   faSearch,
   faHeart,
   faSignOutAlt,
-  faCartShopping
+  faCartShopping,
+  faFacebook,
+  faTwitter,
+  faYoutube,
+  faTruckFast
 ];
