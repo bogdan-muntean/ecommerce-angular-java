@@ -1,4 +1,4 @@
-import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
+import { faCartShopping, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import {
   faUser,
   faShoppingCart,
@@ -13,5 +13,6 @@ export const fontAwesomeIcons: IconDefinition[] = [
   faShoppingCart,
   faSearch,
   faHeart,
-  faSignOutAlt
+  faSignOutAlt,
+  faCartShopping
 ];
