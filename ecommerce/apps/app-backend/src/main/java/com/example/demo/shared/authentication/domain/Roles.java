@@ -1,15 +1,15 @@
 package com.example.demo.shared.authentication.domain;
 
 
-import com.example.demo.shared.error.domain.Assert;
-
 import java.util.Collections;
 import java.util.Set;
 import java.util.stream.Stream;
 
+import com.example.demo.shared.error.domain.Assert;
+
 public record Roles(Set<Role> roles) {
 
-  public static final Roles EMPTY = new Roles(null);
+  public static final Roles EMPTY = new Roles(Collections.emptySet());
 
   public Roles(Set<Role> roles) {
     this.roles = Collections.unmodifiableSet(roles);
